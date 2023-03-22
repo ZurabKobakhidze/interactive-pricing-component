@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive pricing component</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="h1_header">Simple, traffic-based pricing</h1>
+      <p class="p_header">
+        Sign-up for our 30-day trial. No credit card required.
+      </p>
+    </header>
+    <div class="container">
+      <div class="price_box">
+        <div class="price_box_h2">
+          <div class="h2_box">
+            <h2 class="h2_container">100K PAGEVIEWS</h2>
+            <div class="price_month_year_desktop">
+              <span class="price_box_price">$16.00</span>
+              <span class="price_box_date">/ month</span>
+            </div>
+          </div>
+          <input type="range" id="vol" name="vol" min="0" max="4" />
+          <div class="green_line"></div>
+          <div class="price_month_year">
+            <span class="price_box_price">$16.00</span>
+            <span class="price_box_date">/ month</span>
+          </div>
+          <div class="billing_box">
+            <h3 class="h3_month_billing">Monthly Billing</h3>
+            
+            <h3 class="h3_year-billing">Yearly Billing</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
