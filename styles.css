@@ -11,7 +11,7 @@ body {
   padding-left: 24px;
   padding-right: 24px;
   box-sizing: border-box;
-  background-size: auto, auto ;
+  background-size: auto, auto;
 }
 
 .header {
@@ -118,6 +118,14 @@ body {
   color: #848ead;
 }
 
+.input_box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
 input[type="range"] {
   -webkit-appearance: none;
   width: 100%;
@@ -142,15 +150,18 @@ input[type="range"]::-webkit-slider-thumb {
   background-repeat: no-repeat;
   margin-top: -16px;
   background-position: center;
+  position: relative;
+  z-index: 2;
 }
 
 .green_line {
-  width: 100%;
+  width: 50%;
   background: #a4f3eb;
   border-radius: 5px;
   height: 8px;
-  top: -10px;
-  position: relative;
+  top: 41px;
+  position: absolute;
+  left: 0;
 }
 
 .billing_box {
@@ -199,6 +210,10 @@ input[type="range"]::-webkit-slider-thumb {
   height: 19px;
   margin-right: -12px;
   margin-left: 5px;
+}
+
+.h3_sale_desktop {
+  display: none;
 }
 
 .switch {
@@ -331,7 +346,125 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 
-.start_my_trial:hover{
+.start_my_trial:hover {
   color: white;
   transition: 0.4s;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background-size: auto, 100%;
+    padding-left: 450px;
+    padding-right: 450px;
+  }
+
+  .header {
+    padding-top: 104px;
+  }
+
+  .h1_header {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 38px;
+    text-align: center;
+    color: #293356;
+  }
+
+  .p_header {
+    width: 100%;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    color: #848ead;
+  }
+
+  .container {
+    margin-top: 92px;
+    padding-top: 40px;
+    padding-left: 44px;
+    padding-right: 44px;
+    padding-bottom: 33px;
+  }
+
+  .h2_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .price_month_year_desktop {
+    display: block;
+  }
+
+  .price_month_year {
+    display: none;
+  }
+
+  .billing_box{
+    display: flex;
+    width: 100%;
+    margin-top: 34px;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 110px;
+    box-sizing: border-box;
+    padding-bottom: 40px;
+  }
+
+  .h3_sale {
+    display: none;
+  }
+
+  .h3_sale_desktop {
+    display: block;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 10px;
+    line-height: 19px;
+    text-align: center;
+    color: #ff8d68;
+    background: #feede8;
+    border-radius: 9.5px;
+    width: 80px;
+    height: 19px;
+    margin-right: -12px;
+    margin-left: 9px;
+  }
+
+  .switch{
+    margin-left: 15px;
+  }
+
+  .h3_year-billing{
+    margin-left: 16px;
+  }
+
+  .trial_box_info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    padding-top: 25px;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 4px;
+    box-sizing: border-box;
+
+  }
+
+  .benefits{
+    align-items: flex-start;
+  }
+
+  .line_gray{
+    top: -135px;
+  }
 }
