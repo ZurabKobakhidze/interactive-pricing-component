@@ -3,6 +3,7 @@ const output = document.querySelector("#price_box_desktop");
 const outputMobile = document.querySelector("#price_box_mobile");
 const greenLine = document.querySelector(".green_line");
 const pageViews = document.querySelector(".h2_container");
+const discountCheckbox = document.getElementById("discount-checkbox");
 
 function setPrice() {
   let price = 0;
@@ -44,6 +45,19 @@ function setPrice() {
   outputMobile.textContent = "$" + price.toFixed(2);
   greenLine.style.width = greenLineWidth;
   pageViews.textContent = pageViewsNumber;
+
+  if (discountCheckbox.checked) {
+    const discountedPrice = price * 0.75;
+    output.textContent = "$" + discountedPrice.toFixed(2);
+    outputMobile.textContent = "$" + discountedPrice.toFixed(2);
+  }
+  
 }
 
 range.addEventListener("input", setPrice);
+discountCheckbox.addEventListener("change", setPrice);
+
+
+
+
+
